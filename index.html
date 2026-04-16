@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Repositorio Académico</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="header-content">
+        <img src="C:\Users\USER 17\Downloads\mi proyecto\Logo_upla_vertical.jpg" class="logo">
+        <div>
+            <h1>Repositorio Académico</h1>
+            <p>Universidad Peruana los Andes</p>
+        </div>
+    </div>
+</header>
+<section class="perfil">
+    <div class="perfil-card">
+        <img src="C:\Users\USER 17\Downloads\mi proyecto\WhatsApp Image 2025-09-29 at 10.46.00 PM.jpeg" class="foto">
+
+        <div class="info">
+            <h2>Phol Canez Quispe</h2>
+            <p>
+                Estudiante de Ingeniería con enfoque en Bases de Datos y desarrollo web,
+                 orientado al diseño, implementación y optimización de soluciones tecnológicas eficientes.
+                 
+                 Este repositorio reúne de manera estructurada los trabajos desarrollados a lo 
+                 largo de distintas semanas académicas, evidenciando mi progreso continuo, la aplicación 
+                 de conocimientos teóricos en entornos prácticos y el fortalecimiento de mis habilidades 
+                 técnicas en programación, gestión de datos y desarrollo de aplicaciones web.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- LOGIN -->
+<div class="login" id="loginBox">
+    <input type="password" id="password" placeholder="Modo admin">
+    <button onclick="login()">Ingresar</button>
+</div>
+
+<!-- PANEL -->
+<div class="panel" id="adminPanel" style="display:none;">
+    <h3>Agregar tarea</h3>
+
+    <button onclick="irInicio()" class="btnInicio">🏠 Inicio</button>
+
+    <input type="text" id="titulo" placeholder="Título">
+
+    <input type="file" id="archivo">
+
+    <input type="text" id="link" placeholder="Link">
+    <input type="text" id="imagen" placeholder="Imagen (img/tarea.jpg o URL)">
+
+    <select id="semana">
+        <option>Semana 1</option>
+        <option>Semana 2</option>
+        <option>Semana 3</option>
+    </select>
+
+    <select id="tarea">
+        <option>Tarea 1</option>
+        <option>Tarea 2</option>
+    </select>
+
+    <button onclick="agregarTarea()">Guardar</button>
+</div>
+
+<section id="contenedor" class="grid"></section>
+
+<script src="script.js"></script>
+</body>
+</html>

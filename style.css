@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+
+    background: url("C:\Users\USER 17\Downloads\mi proyecto\images.jpg") center/cover no-repeat fixed;
+    color: #e5e5e5;
+}
+
+/* overlay oscuro elegante */
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 20, 0.85);
+    z-index: -1;
+}
+
+/* header */
+.header {
+    padding: 20px 40px;
+    backdrop-filter: blur(10px);
+    background: rgba(15, 15, 30, 0.7);
+    border-bottom: 1px solid rgba(0, 150, 255, 0.3);
+}
+
+/* inputs */
+input, select {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 6px;
+    border: none;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    outline: none;
+}
+
+input:focus, select:focus {
+    box-shadow: 0 0 10px #0096ff;
+}
+
+/* botones */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+
+    background: linear-gradient(45deg, #0f2027, #203a43, #2c5364);
+    color: white;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #0096ff;
+}
+
+/* botón inicio */
+.btnInicio {
+    background: linear-gradient(45deg, #8b0000, #ff0000);
+}
+
+/* panel */
+.panel {
+    background: rgba(20, 20, 40, 0.75);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 150, 255, 0.2);
+}
+
+/* grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 40px;
+}
+
+/* tarjetas */
+.tarea {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.tarea:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px rgba(0,150,255,0.4);
+}
+
+/* imagen */
+.tarea img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+/* contenido */
+.contenido {
+    padding: 15px;
+}
+
+/* links */
+.tarea a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 7px 10px;
+
+    background: #0096ff;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.tarea a:hover {
+    background: #007acc;
+}
+
+/* eliminar */
+.btnEliminar {
+    background: linear-gradient(45deg, #8b0000, #ff0000);
+    margin-top: 10px;
+}
+
+/* PERFIL */
+.perfil {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.perfil-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 800px;
+
+    border: 1px solid rgba(0,150,255,0.2);
+}
+
+/* FOTO */
+.foto {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #0096ff;
+}
+
+/* TEXTO */
+.info h2 {
+    margin-bottom: 10px;
+    color: #00bfff;
+}
+
+.info p {
+    opacity: 0.85;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .perfil-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}
